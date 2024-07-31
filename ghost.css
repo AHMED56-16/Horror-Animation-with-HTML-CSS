@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('./Pis/tumblr_mq9m76dOJ11spl1x1o1_400.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    animation: fadeOutGif 2s forwards;
+}
+
+.content {
+    text-align: center;
+    position: relative;
+}
+
+.message {
+    font-size: 2em;
+    color: white;
+    opacity: 0;
+    animation: fadeIn 1s 2s forwards; 
+}
+
+.retry-button {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    opacity: 0;
+    animation: fadeIn 1s 3s forwards; 
+}
+
+.retry-button:hover {
+    background-color: red;
+    color: black;
+}
+
+@keyframes fadeOutGif {
+    0% {
+        background-image: url('./Pis/tumblr_mq9m76dOJ11spl1x1o1_400.gif');
+    }
+    100% {
+        background-image: none;
+        background-color: black;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
